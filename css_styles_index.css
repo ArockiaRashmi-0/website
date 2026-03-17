@@ -1,0 +1,238 @@
+
+.placeholder_name{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.placeholder_name_name{
+  font-family:serif;
+  font-weight: bold;
+  font-size: 5rem;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;  
+}
+p,h1,.feedback_form{
+  font-size: 3rem;
+  font-family: Arial;
+  color:white;
+  text-shadow: 1px 1px 2px black;
+} 
+    .navigation_strip{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      justify-content: center;
+      align-items: center;
+      gap:15vh;
+      background-color:rgba(255, 255, 255, 0.188);
+    }
+    .navigation_strip_lead_to{
+      cursor: pointer;
+    }
+    .container_footer_landing_page{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-around;
+      justify-content: center;
+      align-items: center;
+      gap:5vh;
+    }
+    .container_landing_page_body{
+      /* padding:10px; */
+      text-align: center;
+      display:grid;
+      width: auto;
+      margin: auto;
+    }
+    .footer_landing_page_lead_to{
+      font-size: 2rem;
+    }
+    /* .paragraph_landing_page{
+    } */
+    body{
+      /* background-color:rgb(86, 60, 115); */
+      /* background-color: linear-gradient(center, red 86%, green 60%, blue 115%); */
+      /* background-color: #ff8a00;  */
+  /* Gradient from left to right, blue to pink */
+      background-image: linear-gradient(to bottom, rgb(110, 190, 216),rgb(165, 5, 165), rgb(75, 116, 214));
+
+    }
+    .container_form{
+      margin: auto;
+      /* padding: ; */
+      /* max-width: 500px; */
+      width:25vw;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      /* width: ;
+      margin:100px; */
+      margin: 5vh;
+    }
+    .feedback_form{
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      width:100%;
+      margin:auto;
+      font-size:2.5rem;
+      background-image: linear-gradient(to bottom, rgb(153, 102, 225), rgb(98, 175, 199));
+      border-style:solid;
+      border-radius:10px;
+      border-width:2px;
+    }
+    .feedback_form{
+      text-align: center;
+    }
+    .feedback_form_label{
+      /* width: 300px;*/
+      /* margin-top: -5px; */
+      height:30px;
+      font-size:2rem;
+      padding-left:0.5vh;
+    }
+    .parent_feedback_form_button{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      justify-content: center;
+      align-items: center;
+    }
+    .feedback_form_button{
+      width:314px;
+      height:40px;
+      border-style:groove;
+      box-shadow: 1px 1px grey;
+      font-size: 2rem;
+      font-weight:bold;
+      cursor: pointer;
+    }
+    .feedback_form_button:active{
+      color:white;
+      background-color: rgb(153, 102, 225);
+    }
+    /* __________________________________
+    --------------------------------------
+    __________________________________ */
+    @media(max-width: 500px) {
+    .placeholder_name{
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+    }
+    .placeholder_name_name{
+        font-family:serif;
+        font-weight: bold;
+        font-size: 10vw;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;  
+    }
+    p,h1,.feedback_form{
+        font-size: 5vw;
+        font-family: Arial;
+        color:white;
+        text-shadow: 1px 1px 2px black;
+      }
+      .navigation_strip{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        justify-content: center;
+        align-items: center;
+
+        gap:3vh;
+        background-color:rgba(253, 253, 253, 0.188);
+      }
+      .navigation_strip_lead_to{
+        cursor: pointer;
+    }
+    .paragraph_landing_page h1{
+      padding:3vh;
+      font-size: 5vw;
+    } 
+    .container_landing_page_body{
+      text-align: center;
+    }
+    .footer_landing_page_lead_to{
+      font-size: 4.5vw;
+    }
+    .container_footer_landing_page{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      row-gap:auto;
+    }
+    /* .paragraph_landing_page{
+      } */
+      body{
+        /* background-color:rgb(86, 60, 115); */
+        /* background-color: linear-gradient(center, red 86%, green 60%, blue 115%); */
+        /* background-color: #ff8a00;  */
+        /* Gradient from left to right, blue to pink */
+        background-image: linear-gradient(to bottom, rgb(110, 190, 216),rgb(165, 5, 165), rgb(75, 116, 214));
+        
+      }
+      .container_form{
+        margin: auto;
+        /* padding: ; */
+        /* max-width: 500px; */
+        width:80vw;
+      }
+      
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        /* width: ;
+        margin:100px; */
+        margin: 5vh;
+      }
+      .feedback_form{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        margin:auto;
+        font-size:6vw;
+        background-image: linear-gradient(to bottom, rgb(153, 102, 225), rgb(98, 175, 199));
+        border-style:solid;
+        border-radius:10px;
+        border-width:2px;
+      }
+      .feedback_form{
+        text-align: center;
+      }
+      .feedback_form_label{
+        /* width: 300px;*/
+        /* margin-top: -5px; */
+        height:4.5vh;
+        font-size:6vw;
+        padding-left:0.5vh;
+      }
+      .parent_feedback_form_button{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+      }
+      .feedback_form_button{
+        height:5vh;
+        width:50vw;
+        border-style:groove;
+        box-shadow: 1px 1px grey;
+        font-size:6vw;
+        font-weight:bold;
+        cursor: pointer;
+      }
+      .feedback_form_button:active{
+  
+        color:white;
+        background-color: rgb(153, 102, 225);
+      }
+    }
