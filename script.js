@@ -1,10 +1,15 @@
+// 1. Find the form in your HTML using its ID
 const contactForm = document.getElementById('contactForm');
 
+// 2. Listen for when the user clicks the "Submit" button
 contactForm.addEventListener('submit', async (e) => {
-    // 1. Stop the page from refreshing (the default HTML behavior)
-    e.preventDefault();
+    
+    // STOP the browser from refreshing (Fixes the issue in your screenshot)
+    e.preventDefault(); 
 
-    // 2. Collect the data from the form fields
+    console.log("Form submission detected! Sending to Render...");
+
+    // 3. Collect the data from the input fields
     const formData = {
         name: contactForm.name.value,
         email: contactForm.email.value,
@@ -12,25 +17,27 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     try {
-        // 3. Send the data to your Render backend
+        // 4. Send the data to your LIVE Render server
         const response = await fetch('https://rashmi-server.onrender.com/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData) // Convert object to JSON string
         });
 
+        // 5. Get the response from your server
         const result = await response.json();
 
         if (response.ok) {
-            alert("Success: " + result.message);
-            contactForm.reset(); // Clear the form
+            alert("Success! Data saved to MongoDB.");
+            contactForm.reset(); // Clear the form fields
         } else {
-            alert("Error: " + result.error);
+            alert("Server Error: " + result.error);
         }
+
     } catch (error) {
         console.error("Connection Error:", error);
-        alert("Could not connect to the server. Is it awake?");
+        alert("Could not connect to the backend. Is Render awake?");
     }
 });
