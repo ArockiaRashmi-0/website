@@ -39,7 +39,7 @@
         </div>
         <div class="feedback_form">
           
-          <form action="/post" method="post">
+          <!-- <form action="/post" method="post">
               <label for="name">Enter your name:</label>
               <input class="feedback_form_label"type="text" id="name" name="name" placeholder="Enter your name">
 
@@ -52,6 +52,12 @@
             <div class="parent_feeback_form_button">
               <button class="feedback_form_button" type="submit">Submit</button>
             </div>
+          </form> -->
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
           </form>
           
         </div>
