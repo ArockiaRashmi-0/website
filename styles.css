@@ -1,0 +1,190 @@
+/* Arockia Rashmi R - Website Development Workflow Project */
+
+/* variables */
+:root{
+
+  /* sizing */
+  --font-title: 2rem;
+  --font-body: 1.5rem;
+  --font-footer: 0.8rem;
+
+  /* color - text */
+  --text-color-main: white;
+
+  /* font - family */
+  --font-type-title: helvetica;
+  --font-type-body: arial;
+  --font-type-special: Courier;
+  /* color - background */
+
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { 
+  scroll-behavior: smooth; font-size: 16px; 
+}
+body{
+  background-image: linear-gradient(to bottom, rgb(110, 190, 216),rgb(165, 5, 165), rgb(75, 116, 214));
+  
+}
+.header{
+  font-size: var(--font-title);
+  text-align: center;
+  margin: 1em auto 1em;
+
+}
+/* Animated Name */
+  .header__name{
+    font-family: var(--font-type-title);
+    font-weight: bold;
+    background-image: linear-gradient(to right,rgb(165, 5, 165), rgb(0, 191, 255),rgb(165, 5, 165), rgb(75, 116, 214),rgb(165, 5, 165));
+    background-size: 500% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-flow 5s ease-out infinite;
+}
+@keyframes gradient-flow {
+  0%{
+    background-position: 0% center;
+  }
+  100%{
+    background-position: 100% center;
+  }
+}
+.body__content{
+  margin-top: 2em;
+  text-align: center;
+  color: var(--text-color-main);
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+  .nav__lead{
+    font-size: var(--font-body);
+    text-decoration: underline dotted;
+    text-decoration-thickness: 2px;
+    font-family: var(--font-type-body);
+    cursor: pointer;
+  }
+.intro{
+  margin-top:5em;
+}
+  .intro__title{
+    font-family: var(--font-type-body);
+    text-shadow: 1px 1px black;
+  } 
+  .intro__paras{
+    margin: 2em auto;
+    width: 90vw;
+    text-shadow: 1px 1px black;
+  }
+  .intro__para{
+    padding-bottom: 2em;
+    font-weight: bold;
+    font-size: var(--font-body);
+    font-family: var(--font-type-special);
+  }
+.form{
+  width: 60vw;
+  margin: 1em auto 5em;
+}
+  .form__title{
+    font-family: var(--font-type-body);
+    font-weight: bold;
+    font-size: var(--font-body);
+    text-shadow: 1px 1px black;
+    padding-bottom: 0.5em;
+  }
+  .contactForm{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.5em;
+  }
+  .form__input{
+    font-size: var(--font-body);
+    text-align: center;
+  }
+  .form__textArea{
+    font-size: var(--font-body); 
+    text-align: center; 
+    resize: vertical;
+    height: 5em;
+    min-height: 5em;
+  }
+  .form__button{
+    font-size: var(--font-body);
+    border: none;
+    padding: 0.5em;
+    font-family: var(--font-type-body);
+    cursor: pointer;
+  }
+  .form__button{
+    color: var(--text-color-main);
+    background-color: rgb(165, 5, 165);
+  }
+  .form__button:hover{
+    background-color: rgba(165, 5, 165, 0.534);
+  }
+  .form__button:active{
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+.tq-greeting{
+  font-size: var(--font-body);
+  margin-bottom: 5em;
+  font-family: var(--font-type-body);
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;  
+  font-size: var(--font-body);
+  color: var(--text-color-main);
+  margin-bottom: 1em;
+}
+  .footer__lead{
+    font-family: var(--font-type-body);
+  }
+
+@media(max-width:400px) {
+:root{
+
+  /* sizing */
+  --mb-font-title: 1.8rem;
+  --mb-font-body: 1rem;
+  --font-footer: 0.8rem;
+}
+.header__name{
+  font-size: var(--mb-font-title);
+}
+.nav__lead{
+  font-size: var(--mb-font-body);
+}
+.intro__title{
+  font-size: var(--mb-font-body);
+}
+.intro__para{
+  font-size: var(--mb-font-body);
+}
+.form{
+  width: 80vw;
+}
+.form__title{
+  font-size: var(--mb-font-body);
+}
+.form__input{
+  font-size: var(--mb-font-body);
+}
+.form__textArea{
+  font-size: var(--mb-font-body);
+}
+.form__button{
+  font-size: var(--mb-font-body);
+}
+.tq-greeting{
+  font-size: var(--mb-font-body);
+}
+.footer__lead{
+  font-size: var(--mb-font-body);
+}
+}
